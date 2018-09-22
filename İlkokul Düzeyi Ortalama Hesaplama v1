@@ -1,0 +1,29 @@
+a= int(input("Matematik Ders Saati:"))
+b= int(input("Fen Ders Saati:"))
+c= int(input("Türkçe Ders Saati:"))
+d= int(input("İnkılap Ders Saati:"))
+e= int(input("İngilizce Ders Saati:"))
+f= int(input("Din Kültürü Ders Saati:"))
+g= int(input("Beden Ders Saati:"))
+
+an= int(input("Matematik Puanı:"))
+bn= int(input("Fen Puanı:"))
+cn= int(input("Türkçe Puanı:"))
+dn= int(input("İnkılap Puanı:"))
+en= int(input("İngilizce Puanı:"))
+fn= int(input("Din Kültürü Puanı:"))
+gn= int(input("Beden Ders Puanı:"))
+
+ak=a*an
+bk=b*bn
+ck=c*cn
+dk=d*dn
+ek=e*en
+fk=f*fn
+gk=g*gn
+
+ort=ak+bk+ck+dk+ek+fk+gk
+ort2=a+b+c+d+e+f+g
+ort3=ort/ort2
+
+print("Ortalamanız: {}".format (ort3))

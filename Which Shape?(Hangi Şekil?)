@@ -1,0 +1,116 @@
+
+
+select_language = int(input("*****If you want to choose English please press write 1 and press enter*****\n*****Türkçe seçmek istiyorsanız lütfen 2 tuşlayınız.*****\n:" ))
+
+if select_language == int("1") :
+    print("**********\nWelcome**********\n")
+
+
+    number_of_edges = int(input("Please enter the number of edges of your shape:"))
+
+    if number_of_edges == 3 :
+        a=int(input("Please enter the first side length of your shape:"))
+        b=int(input("Please enter the second side length of your shape:"))
+        c=int(input("Please enter the third side length of your shape:"))
+
+        if (abs(a + b) > c and abs(a + c) > b and abs(b + c) > a):
+            if (a == b and c == b):
+                print("Your shape is equilateral triangle.")
+
+            elif (a == b and b != c):
+                print("Your shape is isosceles triangle.")
+
+            elif (a == c and a != b):
+                print("Your shape is isosceles triangle.")
+
+            elif (a != b and b != c):
+                print("Your shape is unequal triangle.")
+
+        else:
+            print("Your shape is not triangle")
+
+
+    if number_of_edges == 4 :
+        print("**********\nThis program accepts corners angles 90...\n********** ")
+        a = int(input("Please enter the first side length of your shape:"))
+        b = int(input("Please enter the second side length of your shape:"))
+        c = int(input("Please enter the third side length of your shape:"))
+        d = int(input("Please enter the fourth side length of your shape:"))
+
+        if (a == b and c == b and a == d):
+            print("Your shape is square.")
+
+        elif (a == b and c == d and a != c):
+            print("Your shape is rectangle")
+
+        elif (a == c and b == d and a != b):
+            print("Your shape is rectangle")
+
+        elif (a == b and c == d and a != c):
+            print("Your shape is rectangle")
+
+        else:
+            print("Your shape is not tetragon")
+
+
+
+    elif (number_of_edges != 3 and number_of_edges != 4):
+        print("This program is just triangles and quadrilaterals.")
+
+
+
+if select_language == int("2") :
+    print("**********\nHoşgeldiniz**********\n")
+
+    number_of_edges = int(input("Lütfen şeklinizin kaç kenarlı olduğunu giriniz.:"))
+
+    if number_of_edges == 3:
+        a = int(input("Lütfen şeklinizin ilk kenar uzunluğunu giriniz:"))
+        b = int(input("Lütfen şeklinizin ikinci kenar uzunluğunu giriniz:"))
+        c = int(input("Lütfen şeklinizin üçüncü kenar uzunluğunu giriniz:"))
+
+        if (abs(a + b) > c and abs(a + c) > b and abs(b + c) > a):
+            if (a == b and c == b):
+                print("Şekliniz bir eşkenar üçgen.")
+
+            elif (a == b and b != c):
+                print("Şekliniz bir ikizkenar üçgen.")
+
+            elif (a == c and a != b):
+                print("Şekliniz bir ikizkenar üçgen.")
+
+            elif (a != b and b != c):
+                print("Şekliniz bir çeşitkenar üçgen.")
+
+        else:
+            print("Girdiğiniz uzunluklar düzgün bir şekil belirtmiyor.")
+
+    if number_of_edges == 4:
+        print("**********\nProgram şeklinizdeki açıları 90 derece kabul edecektir...\n********** ")
+        a = int(input("Lütfen şeklinizin ilk kenar uzunluğunu giriniz:"))
+        b = int(input("Lütfen şeklinizin ikinci kenar uzunluğunu giriniz:"))
+        c = int(input("Lütfen şeklinizin üçüncü kenar uzunluğunu giriniz:"))
+        d = int(input("Lütfen şeklinizin dördüncü kenar uzunluğunu giriniz:"))
+
+        if (a == b and c == b and a == d):
+            print("Şekliniz bir kare.")
+
+        elif (a == b and c == d and a != c):
+            print("Şekliniz bir dikdörtgen")
+
+        elif (a == c and b == d and a != b):
+            print("Şekliniz bir dikdörtgen")
+
+        elif (a == b and c == d and a != c):
+            print("Şekliniz bir dikdörtgen")
+
+        else:
+            print("Şekliniz bir dörtgen belirtmiyor.")
+
+
+
+    elif (number_of_edges != 3 and number_of_edges != 4):
+        print("Bu program yalnızca üçgen ve dörtgenleri ayırt edebilir.")
+
+else:
+    print("***Please select 1 or 2...***\n***Lütfen 1 veya 2 seçiniz...***")
